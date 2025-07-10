@@ -1,10 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { TrendingUp, TrendingDown, DollarSign, MapPin, Calendar, Refresh } from "lucide-react";
+import { TrendingUp, TrendingDown, DollarSign, MapPin, Calendar, RefreshCw } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 
 interface MarketData {
@@ -172,7 +171,7 @@ const MarketAnalysis = () => {
                 disabled={isLoading}
                 className="w-full agricultural-gradient text-white"
               >
-                <Refresh className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+                <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
                 {isLoading ? 'Updating...' : 'Refresh Prices'}
               </Button>
             </div>
